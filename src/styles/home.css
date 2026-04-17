@@ -1,0 +1,226 @@
+/* ========================
+   HOME PAGE
+======================== */
+.home-page {
+  background-color: #dff0e8;
+  min-height: 100vh;
+}
+
+/* ── Hero Section ── */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 60px 50px;
+  background: linear-gradient(135deg, #c8e6c9 0%, #e8f5e9 100%);
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1a3d2b;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: #3d6b52;
+  margin-bottom: 28px;
+  max-width: 420px;
+}
+
+.hero-btn {
+  background-color: #1a3d2b;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.2s;
+}
+
+.hero-btn:hover {
+  background-color: #2e7d52;
+}
+
+/* ── Hero Illustration ── */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-illustration {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  width: 440px;
+  height: 320px;
+}
+
+.hero-agri-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.hero-agri-img:hover {
+  transform: scale(1.04);
+}
+
+.farm-cell.dark {
+  background: #166534;
+}
+
+/* ── Features Section ── */
+.features-section {
+  padding: 50px 60px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a3d2b;
+  margin-bottom: 20px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+}
+
+.feature-icon {
+  font-size: 28px;
+  padding: 10px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.feat-blue .feature-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+.feat-purple .feature-icon {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+.feat-green .feature-icon {
+  background: #dcfce7;
+  color: #15803d;
+}
+.feat-orange .feature-icon {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.feature-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.feature-desc {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ── How It Works ── */
+.how-section {
+  padding: 10px 60px 50px;
+}
+
+.steps-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.step-box {
+  background: white;
+  border-radius: 8px;
+  padding: 12px 18px;
+  display: flex;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #1a3d2b;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid #d1fae5;
+}
+
+.step-num {
+  font-weight: 700;
+  color: #2e7d52;
+}
+
+.step-arrow {
+  font-size: 20px;
+  color: #2e7d52;
+  flex-shrink: 0;
+}
+
+/* ========================
+     RESPONSIVE — HOME
+  ======================== */
+@media (max-width: 900px) {
+  .hero-illustration {
+    width: 100%;
+    height: 220px;
+  }
+  .hero-section {
+    flex-direction: column;
+    padding: 36px 24px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .features-section,
+  .how-section {
+    padding: 30px 24px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .step-arrow {
+    transform: rotate(90deg);
+  }
+}

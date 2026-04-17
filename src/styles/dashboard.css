@@ -1,0 +1,431 @@
+/* ========================
+   DASHBOARD PAGE
+======================== */
+.dashboard-page {
+  padding: 24px;
+  background-color: #e8f5e9;
+  min-height: 100vh;
+}
+
+.dash-greeting {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a3d2b;
+  margin-bottom: 20px;
+}
+
+.analyzer-section,
+.control-panel,
+.soil-type-section,
+.analysis-section {
+  margin-bottom: 24px;
+}
+
+.section-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+.section-sub {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 16px;
+}
+.last-updated {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Inputs Grid */
+.inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Control Panel */
+.control-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.control-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ========================
+     SOIL TYPE CARD
+  ======================== */
+.soil-type-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border-left: 5px solid #2e7d52;
+}
+
+.soil-emoji {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+.soil-detected-label {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 3px;
+}
+.soil-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a3d2b;
+  margin-bottom: 4px;
+}
+.soil-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ========================
+     ANALYSIS LAYOUT
+  ======================== */
+.analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ========================
+     LEFT — CROP CARDS
+  ======================== */
+.crop-suggestions-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rec-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rec-header-icon {
+  font-size: 22px;
+  color: #2e7d52;
+}
+
+.rec-header h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.rec-header h3 span {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666;
+}
+
+.crop-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Individual Crop Card */
+.crop-rec-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border: 2px solid #e8f5e9;
+  transition: box-shadow 0.2s;
+}
+
+.crop-rec-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Crop name + image row */
+.crop-name-img-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.crop-text-side {
+  flex: 1;
+}
+
+.crop-rec-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a3d2b;
+  margin-bottom: 10px;
+}
+
+.why-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.crop-reasons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.crop-reasons li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.reason-dot {
+  width: 7px;
+  height: 7px;
+  min-width: 7px;
+  background: #2e7d52;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+/* ✅ Match % bullet — darker dot */
+.match-dot {
+  background: #1a3d2b !important;
+}
+
+.match-score-inline {
+  color: #2e7d52;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* ✅ Crop image — correct size, no badge/circle */
+.crop-img-box {
+  width: 140px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.crop-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ✅ Tip box — no select button */
+.tip-box {
+  background: #f0fdf4;
+  border-radius: 8px;
+  padding: 12px 14px;
+  border: 1px solid #bbf7d0;
+}
+
+.tip-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2e7d52;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.tip-icon {
+  font-size: 13px;
+}
+.tip-text {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ========================
+     ✅ SHOW MORE BUTTON
+  ======================== */
+.show-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background: white;
+  border: 2px #2e7d52;
+  border-style: solid;
+  border-radius: 10px;
+  color: #2e7d52;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 4px;
+}
+
+.show-more-btn:hover {
+  background: #f0fdf4;
+  color: #1a3d2b;
+}
+
+.show-more-icon {
+  font-size: 20px;
+}
+
+/* ========================
+     RIGHT — CHART CARD
+  ======================== */
+.chart-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  position: sticky;
+  top: 80px;
+}
+
+.chart-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a3d2b;
+  margin-bottom: 14px;
+}
+
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 12px;
+  color: #444;
+}
+
+.chart-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* No match message */
+.no-crop-msg {
+  background: #fff7ed;
+  border: 1.5px solid #fed7aa;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  color: #92400e;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* ========================
+     RESPONSIVE
+  ======================== */
+@media (max-width: 1100px) {
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+  .chart-card {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) {
+  .inputs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .crop-name-img-row {
+    flex-direction: column-reverse;
+  }
+  .crop-img-box {
+    width: 100%;
+    height: 160px;
+  }
+
+  /* ✅ Reduce input field size on mobile */
+  .input-field-wrapper {
+    padding: 8px 12px;
+  }
+
+  .input-label {
+    font-size: 12px;
+  }
+  .input-unit {
+    font-size: 11px;
+  }
+  .input-icon {
+    font-size: 16px;
+  }
+
+  .input-box {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inputs-grid {
+    grid-template-columns: 1fr 1fr;
+  } /* ✅ keep 2 columns on small mobile */
+  .dashboard-page {
+    padding: 12px;
+  }
+  .crop-rec-name {
+    font-size: 18px;
+  }
+  .analyzer-section {
+    margin-bottom: 14px;
+  }
+
+  /* ✅ Even more compact on very small screens */
+  .input-field-wrapper {
+    padding: 7px 10px;
+  }
+  .input-box {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
